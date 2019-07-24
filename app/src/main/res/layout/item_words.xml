@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_Words"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:padding="@dimen/dimen10"
+        android:text="words"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_22sp" />
+
+    <TextView
+        android:id="@+id/tv_Lable_Words_Times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_Words_Times1"
+        android:padding="@dimen/dimen10"
+        android:text="Study Times"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_18sp" />
+
+    <TextView
+        android:id="@+id/tv_Words_Times1"
+        android:layout_width="@dimen/dimen50"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:gravity="center"
+        android:padding="@dimen/dimen06"
+        android:text="000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_20sp" />
+
+</RelativeLayout>

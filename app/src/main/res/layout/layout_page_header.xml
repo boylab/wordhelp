@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <Button
+        android:id="@+id/btn_Header_Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_chevron_left_black_48dp"
+        android:text="Back"
+        android:paddingRight="@dimen/dimen10"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_18sp" />
+
+    <TextView
+        android:id="@+id/tv_Header_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/app_name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Header_Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/ic_menu_black_24dp"
+        android:paddingRight="@dimen/dimen20"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_Header_Left"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

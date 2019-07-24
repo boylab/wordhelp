@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dimen10"
+        android:background="@drawable/corners_pop_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen02">
+
+        <Button
+            android:id="@+id/btn_Menu_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_top"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_Menu_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_middle"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_Menu_03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_middle"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_Menu_04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_middle"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_18sp" />
+
+        <Button
+            android:id="@+id/btn_Menu_05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bottom"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

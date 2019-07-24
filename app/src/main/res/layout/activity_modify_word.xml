@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ModifyWordActivity">
+
+    <include
+        android:id="@+id/include_StudyWordsActivity"
+        layout="@layout/layout_page_header" />
+
+    <ListView
+        android:id="@+id/lv_Study_Words"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_StudyWordsActivity"
+        android:layout_centerInParent="true"
+        android:divider="#CCCCCC"
+        android:dividerHeight="2px" />
+
+</RelativeLayout>
