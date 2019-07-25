@@ -109,8 +109,13 @@ public class ModifyWordActivity extends AppCompatActivity implements View.OnClic
                             @Override
                             public void run() {
 
-                                word.setWord(editText.getText().toString().trim());
-                                WordDatabase.getInstance(ModifyWordActivity.this).wordDao().update(word);
+                                WordDatabase.getInstance(ModifyWordActivity.this).wordDao().delete(word);
+
+                                Word word1 = new Word();
+                                word1.setUnit(unitID);
+                                word1.setWord(editText.getText().toString().trim());
+                                word1.setUpdatetime(System.currentTimeMillis());
+                                WordDatabase.getInstance(ModifyWordActivity.this).wordDao().insert(word1);
 
                                 List<Word> temple = WordDatabase.getInstance(ModifyWordActivity.this).wordDao().getAllWords(unitID);
                                 allWords.clear();

@@ -3,22 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
+    <ImageView
+        android:id="@+id/sfdfsf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:background="@drawable/ic_book_black_24dp"
+        android:tint="#66D81B60" />
+
+
     <TextView
         android:id="@+id/tv_Words_Unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginLeft="@dimen/dimen20"
         android:layout_marginTop="@dimen/dimen10"
         android:layout_marginEnd="@dimen/dimen10"
         android:layout_marginBottom="@dimen/dimen10"
+        android:layout_toRightOf="@+id/sfdfsf"
         android:padding="@dimen/dimen10"
         android:text="UNIT 1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/black"
         android:textSize="@dimen/text_20sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tv_Lable_Words_Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,6 +58,6 @@
         android:text="30/20"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/text_20sp" />
+        android:textSize="@dimen/text_20sp" />-->
 
 </RelativeLayout>

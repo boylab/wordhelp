@@ -7,18 +7,16 @@
         android:id="@+id/tv_Words"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dimen10"
-        android:layout_marginTop="@dimen/dimen10"
-        android:layout_marginEnd="@dimen/dimen10"
-        android:layout_marginBottom="@dimen/dimen10"
-        android:padding="@dimen/dimen10"
+        android:layout_margin="@dimen/dimen04"
+        android:padding="@dimen/dimen06"
         android:text="words"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/text_22sp" />
+        android:textSize="@dimen/text_24sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tv_Lable_Words_Times"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,6 +43,6 @@
         android:text="000"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/text_20sp" />
+        android:textSize="@dimen/text_20sp" />-->
 
 </RelativeLayout>

@@ -50,7 +50,7 @@ public class UnitsAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.item_units, null);
             viewHolder.tv_Words_Unit = convertView.findViewById(R.id.tv_Words_Unit);
-            viewHolder.tv_Words_Percent = convertView.findViewById(R.id.tv_Words_Percent);
+            //viewHolder.tv_Words_Percent = convertView.findViewById(R.id.tv_Words_Percent);
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();

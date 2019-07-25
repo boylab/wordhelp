@@ -127,12 +127,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Unit unit = new Unit();
-                unit.setUnit("123");
-                unit.setUnittime(System.currentTimeMillis());
-                WordDatabase.getInstance(MainActivity.this).unitDao().insert(unit);
 
-                List<Unit> temple = WordDatabase.getInstance(MainActivity.this).unitDao().getAllUnit();
+                List<Unit> temple = WordDatabase.getInstance(MainActivity.this).unitDao().getMinUnit();
+                if (temple == null || temple.isEmpty()){
+                    Unit unit = new Unit();
+                    unit.setUnit("123");
+                    unit.setUnittime(System.currentTimeMillis());
+                    WordDatabase.getInstance(MainActivity.this).unitDao().insert(unit);
+                }else {
+                    Unit unit = temple.get(0);
+                    unit.setUnittime(System.currentTimeMillis());
+                    WordDatabase.getInstance(MainActivity.this).unitDao().update(unit);
+                }
+
+                temple = WordDatabase.getInstance(MainActivity.this).unitDao().getAllUnit();
                 allUnit.clear();
                 allUnit.addAll(temple);
 
@@ -167,7 +175,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     WordDatabase.getInstance(MainActivity.this).wordDao().delete(arr);
                                 }
 
-                                WordDatabase.getInstance(MainActivity.this).unitDao().delete(unit);
+                                unit.setUnittime(0);
+                                WordDatabase.getInstance(MainActivity.this).unitDao().update(unit);
 
                                 List<Unit> temple = WordDatabase.getInstance(MainActivity.this).unitDao().getAllUnit();
                                 allUnit.clear();

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.boylab.wordhelp.R;
 import com.boylab.wordhelp.adapter.WordsAdapter;
@@ -30,6 +31,7 @@ import java.util.List;
 public class StudyWordsActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener, MenuPopup.OnMenuClickListener {
 
     private Button btn_Header_Left, btn_Header_Right;
+    private TextView tv_Header_Title ;
     private ListView lv_Study_Words;
     private List<Word> allWords = new ArrayList<>();
     private WordsAdapter wordsAdapter ;
@@ -58,6 +60,7 @@ public class StudyWordsActivity extends AppCompatActivity implements View.OnClic
     protected void initView(){
         btn_Header_Left = findViewById(R.id.btn_Header_Left);
         btn_Header_Right = findViewById(R.id.btn_Header_Right);
+        tv_Header_Title = findViewById(R.id.tv_Header_Title);
 
         lv_Study_Words = findViewById(R.id.lv_Study_Words);
         wordsAdapter = new WordsAdapter(this,allWords );
@@ -99,7 +102,7 @@ public class StudyWordsActivity extends AppCompatActivity implements View.OnClic
     public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
         final Word word = allWords.get(position);
-        new Thread(new Runnable() {
+        /*new Thread(new Runnable() {
             @Override
             public void run() {
 
@@ -117,7 +120,7 @@ public class StudyWordsActivity extends AppCompatActivity implements View.OnClic
                     }
                 });
             }
-        }).start();
+        }).start();*/
 
 
 
@@ -152,6 +155,7 @@ public class StudyWordsActivity extends AppCompatActivity implements View.OnClic
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        tv_Header_Title.setText("背单词("+allWords.size()+")");
                         wordsAdapter.notifyDataSetChanged();
                     }
                 });

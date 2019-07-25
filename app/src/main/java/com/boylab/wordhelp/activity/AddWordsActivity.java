@@ -109,6 +109,13 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
             public void run() {
                 WordDatabase.getInstance(AddWordsActivity.this).wordDao().insert(words);
                 EventBus.getDefault().postSticky(new MessageEvent(0x01,"添加成功"));
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        editText_Input.setText("");
+                    }
+                });
             }
         }).start();
 

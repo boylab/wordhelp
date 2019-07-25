@@ -49,13 +49,13 @@ public class WordsAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.item_words, null);
             viewHolder.tv_Words = convertView.findViewById(R.id.tv_Words);
-            viewHolder.tv_Words_Times = convertView.findViewById(R.id.tv_Words_Times1);
+            //viewHolder.tv_Words_Times = convertView.findViewById(R.id.tv_Words_Times1);
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         viewHolder.tv_Words.setText(list.get(position).getWord());
-        viewHolder.tv_Words_Times.setText(String.valueOf(list.get(position).getStudytimes()));
+        //viewHolder.tv_Words_Times.setText(String.valueOf(list.get(position).getStudytimes()));
 
         return convertView;
     }

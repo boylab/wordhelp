@@ -15,8 +15,11 @@ import java.util.List;
 @Dao
 public interface UnitDao {
 
-    @Query("SELECT * FROM unit ORDER BY unit.id")
+    @Query("SELECT * FROM unit where unit.unittime != 0 ORDER BY unit.id")
     List<Unit> getAllUnit();
+
+    @Query("SELECT * FROM unit where unit.unittime == 0 ORDER BY unit.id")
+    List<Unit> getMinUnit();
 
     @Insert
     void insert(Unit... units);
